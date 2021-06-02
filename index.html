@@ -8,14 +8,13 @@
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="stylesheet" href="style.css">
-
 	<title>Frontend Mentor | Interactive pricing component</title>
-
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 	<style>
 		.attribution {
+			margin-top: 3rem;
 			font-size: 11px;
 			text-align: center;
+			padding-bottom: 1rem;
 		}
 
 		.attribution a {
@@ -26,25 +25,52 @@
 
 <body>
 	<main>
-		Simple, traffic-based pricing
-		Sign-up for our 30-day trial. No credit card required.
+		<div class="bg-img">
+			<img src="./images/bg-pattern.svg" alt="">
+		</div>
+		<header>
+			<img class="bg-circles" src="./images/pattern-circles.svg" alt="">
+			<h1>Simple, traffic-based pricing</h1>
+			<p>Sign-up for our 30-day trial. No credit card required.</p>
+		</header>
 
-		Pageviews
-		$ /month
+		<div class="card-container">
+			<div class="card">
+				<div class="pricing-preview">
+					<h3>
+						<strong id="views"></strong> PAGEVIEWS
+					</h3>
+					<h3 id="monthly"><strong id="price"></strong> /month</h3>
+				</div>
+				<div class="slidecontainer">
+					<input type="range" min="1" max="5" value="1" class="slider" id="myRange">
+				</div>
+				<div class="billing">
+					<p class="swicth-monthly">Monthly Billing</p>
+					<label class="switch">
+						<input type="checkbox">
+						<span class="slider-switch round"></span>
+					</label>
+					<p>Yearly Billing</p>
+					<p class="discount">25% discount</p>
+				</div>
 
-		Monthly Billing
-		Yearly Billing 25% discount
-
-		Unlimited websites
-		100% data ownership
-		Email reports
-
-		Start my trial
+				<div class="start-trial">
+					<ul>
+						<li><img src="./images/icon-check.svg" alt=""> Unlimited websites</li>
+						<li><img src="./images/icon-check.svg" alt=""> 100% data ownership</li>
+						<li><img src="./images/icon-check.svg" alt=""> Email reports</li>
+					</ul>
+					<button>Start my trial</button>
+				</div>
+			</div>
+		</div>
 	</main>
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
+		Coded by <a href="https://www.frontendmentor.io/profile/TendaiChikwiri" target="_blank">Tendai Chikwiri</a>.
 	</div>
+	<script src="index.js"></script>
 </body>
 
 </html>
